@@ -3,8 +3,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  state = {
+    users: null,
+    active: false
+  };
   handleClick = () => {
-    console.log("the button was clicked")
+    fetch("https://api.github.com/users/NicholasB85")
+    .then(res => res.json())
+    .then(data => {
+      this.setState({users: data, active: true})
+    })
   }
   render() {
     return (
