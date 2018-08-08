@@ -42,7 +42,7 @@ class App extends Component {
           image={this.state.users.avatar_url}
           header={this.state.users.login}
           meta={"Public Repos: " + this.state.users.public_repos}
-          description={"Folowers: " + this.state.users.followers}
+          description={"Followers: " + this.state.users.followers}
           extra={extra}
         />
         ) : null}
